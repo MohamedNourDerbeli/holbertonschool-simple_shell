@@ -35,4 +35,4 @@ This project is a simple implementation of a UNIX shell, created as part of the 
 1. Clone the repository:
 
    ```bash
-   git clonehttps://github.com/MohamedNourDerbeli/holbertonschool-simple_shell.git
+   git clone https://github.com/MohamedNourDerbeli/holbertonschool-simple_shell.git
