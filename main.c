@@ -11,10 +11,11 @@ int main(__attribute__((unused)) int ac, char **av)
 {
 	char *line = NULL;
 	char **command = NULL;
-	int status = 0;
+	int status = 0, idx = 0;
 
 	while (1)
 	{
+
 		line = read_line();
 		if (line == NULL)
 		{
@@ -22,12 +23,12 @@ int main(__attribute__((unused)) int ac, char **av)
 				write(STDOUT_FILENO, "\n", 1);
 			return (status);
 		}
+		idx++;
 		command = split_str(line);
 		if (!command)
 			continue;
-		status = exec(command, av);
+		status = exec(command, av, idx);
 	}
 
 	return (0);
 }
-
