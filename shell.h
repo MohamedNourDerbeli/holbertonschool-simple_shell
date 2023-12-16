@@ -6,8 +6,11 @@
 #include <string.h>
 #include <sys/types.h>
 #include <sys/wait.h>
+#include <sys/stat.h>
 extern char **environ;
 char *read_line(void);
+char *handle_path(char *command);
+char *_get_env(char *var);
 char *my_strdup(const char *s);
 char **split_str(char *line);
 void free_array(char **command);
