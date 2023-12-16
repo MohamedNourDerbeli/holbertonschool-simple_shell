@@ -24,7 +24,7 @@ int exec(char **command, char **av)
 		{
 			perror(av[0]);
 			free_array(command);
-			exit(2);
+			exit(EXIT_FAILURE);
 		}
 	}
 	else
@@ -32,5 +32,6 @@ int exec(char **command, char **av)
 		waitpid(child, &status, 0);
 		free_array(command);
 	}
+
 	return (WEXITSTATUS(status));
 }
