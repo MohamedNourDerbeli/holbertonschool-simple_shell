@@ -14,5 +14,5 @@ char *_get_env(char *var);
 char *my_strdup(const char *s);
 char **split_str(char *line);
 void free_array(char **command);
-int exec(char **arr, char **av);
+int exec(char **arr, char **av, int idx);
 #endif
