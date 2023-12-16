@@ -12,6 +12,7 @@ char *handle_path(char *command)
 		{
 			if (stat(command, &buf) == 0)
 				return (my_strdup(command));
+
 			return (NULL);
 		}
 	}
@@ -39,6 +40,7 @@ char *handle_path(char *command)
 			path = strtok(NULL, ":");
 		}
 	}
+	free(env);
 	free(path);
 	return (NULL);
 }
