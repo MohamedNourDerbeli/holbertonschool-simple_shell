@@ -13,9 +13,15 @@ int exec(char **command, char **av)
 	if (strcmp(command[0], "exit") == 0)
 	{
 		free_array(command);
-		exit(0);
+		exit(EXIT_SUCCESS);
 	}
-	
+	else
+	{
+		free_array(command);
+		perror(av[0]);
+		exit(EXIT_FAILURE);
+	}
+
 	child = fork();
 	if (child == 0)
 	{
