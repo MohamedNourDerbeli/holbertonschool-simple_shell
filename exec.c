@@ -14,7 +14,7 @@ int exec(char **command, char **av)
 	child = fork();
 	if (child == 0)
 	{
-		if (strcmp(command[0], "exit") == 0)
+		if (strcmp(command[0], "exit") == -1)
 		{
 			free_array(command);
 			exit(2);
