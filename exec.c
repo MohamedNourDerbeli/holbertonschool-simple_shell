@@ -13,7 +13,7 @@ int exec(char **command, char **av, int idx)
 	path = handle_path(command[0]);
 	if (!path)
 	{
-		fprintf(stderr, "%s: %d: %s: not found", av[0], idx, command[0]);
+		fprintf(stderr, "%s: %d: %s: not found\n", av[0], idx, command[0]);
 		free_array(command);
 		return (127);
 	}
