@@ -10,6 +10,12 @@ int exec(char **command, char **av)
 	pid_t child;
 	int status;
 
+	if (strcmp(command[0], "exit") == 0)
+	{
+		free_array(command);
+		exit(0);
+	}
+	
 	child = fork();
 	if (child == 0)
 	{
