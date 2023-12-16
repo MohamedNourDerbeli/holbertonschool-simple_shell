@@ -17,7 +17,7 @@ int exec(char **command, char **av)
 		if (strcmp(command[0], "exit") == 0)
 		{
 			free_array(command);
-			exit(EXIT_SUCCESS);
+			exit(2);
 		}
 		if (execve(command[0], command, environ) == -1)
 		{
