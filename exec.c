@@ -14,13 +14,7 @@ int exec(char **command, char **av)
 	child = fork();
 	if (child == 0)
 	{
-		if (strcmp(command[0], "exit") == 0)
-		{
-			free_array(command);
-			exit(0);
-		}
-
-		if (execve(command[0], command, environ) == -1)
+		if (execve(handle_path(command[0]), command, environ) == -1)
 		{
 			perror(av[0]);
 			free_array(command);
