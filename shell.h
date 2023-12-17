@@ -9,6 +9,8 @@
 #include <sys/stat.h>
 extern char **environ;
 char *read_line(void);
+int is_built_in(char *command);
+void handle_built_in(char **command, int status, int idx);
 char *handle_path(char *command);
 char *_get_env(char *var);
 char *my_strdup(const char *s);
