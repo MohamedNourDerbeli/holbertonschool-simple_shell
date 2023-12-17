@@ -11,36 +11,40 @@ char *handle_path(char *command)
 		if (command[i] == '/')
 		{
 			if (stat(command, &buf) == 0)
-				return (my_strdup(command));
+				return my_strdup(command);
 
-			return (NULL);
+			return NULL;
 		}
 	}
 
 	env = _get_env("PATH");
 	if (!env)
-		return (NULL);
+		return NULL;
 
 	path = strtok(env, ":");
 	while (path)
 	{
 		cmd = malloc(strlen(path) + strlen(command) + 2);
-		if (cmd)
+		if (cmd != NULL)
 		{
-			strcpy(cmd, path);
-			strcat(cmd, "/");
-			strcat(cmd, command);
+			snprintf(cmd, strlen(path) + strlen(command) + 2, "%s/%s", path, command);
 			if (stat(cmd, &buf) == 0)
 			{
 				free(env);
-				return (cmd);
+				return cmd;
 			}
-			free(cmd), cmd = NULL;
+
+			free(cmd);
 
 			path = strtok(NULL, ":");
 		}
+		else
+		{
+			free(env);
+			return NULL;
+		}
 	}
+
 	free(env);
-	free(path);
-	return (NULL);
+	return NULL;
 }
