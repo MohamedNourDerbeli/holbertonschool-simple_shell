@@ -27,7 +27,10 @@ int main(__attribute__((unused)) int ac, char **av)
 		command = split_str(line);
 		if (!command)
 			continue;
-		status = exec(command, av, idx);
+		if (is_built_in(command[0])==1)
+			handle_built_in(command, status, idx);
+		else
+			status = exec(command, av, idx);
 	}
 
 	return (0);
