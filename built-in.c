@@ -31,6 +31,6 @@ void handle_built_in(char **command, int status, int idx)
 			printf("%s\n", environ[i]);
 		}
 		free_array(command);
-		(status) = 0;
+		(*status) = 0;
 	}
 }
