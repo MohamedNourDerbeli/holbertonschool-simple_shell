@@ -16,11 +16,11 @@ int is_built_in(char *command)
 }
 void handle_built_in(char **command, int status,int idx)
 {
-	(void)status;
+
 	(void)idx;
 	if (strcmp(command[0], "exit") == 0)
 	{
 		free_array(command);
-		exit(127);
+		exit(status);
 	}
 }
