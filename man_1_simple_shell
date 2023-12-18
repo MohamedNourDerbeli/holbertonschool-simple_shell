@@ -1,0 +1,61 @@
+MAN_1_SIMPLE_SHELL(1)                User Commands               MAN_1_SIMPLE_SHELL(1)
+
+NAME
+       simple_shell - Holberton School project shell
+
+SYNOPSIS
+       simple_shell
+
+DESCRIPTION
+       simple_shell is a basic Unix shell developed as a project for Holberton
+       School. It provides a command-line interface for users to interact with
+       the operating system.
+
+OPTIONS
+       None.
+
+COMMANDS
+       The shell supports various standard shell commands, including but not
+       limited to:
+
+       - cd: Change directory.
+       - ls: List directory contents.
+       - pwd: Print current working directory.
+       - echo: Display a message.
+       - exit: Exit the shell.
+
+AUTHORS
+       simple_shell was developed by Mohamed Nour, Ahmed, and Eya as a Holberton
+       School project.
+
+BUGS
+       Report any bugs or issues to the project repository on GitHub:
+       https://github.com/MohamedNourDerbeli/holbertonschool-simple_shell
+
+SEE ALSO
+       For additional information, refer to the project documentation and code
+       repository.
+
+EXAMPLES
+       $ simple_shell
+       simple_shell$ ls
+       file1 file2 file3
+       simple_shell$ cd /path/to/directory
+       simple_shell$ pwd
+       /path/to/directory
+
+COPYRIGHT
+       This program is free software: you can redistribute it and/or modify
+       it under the terms of the GNU General Public License as published by
+       the Free Software Foundation, either version 3 of the License, or
+       (at your option) any later version.
+
+       This program is distributed in the hope that it will be useful,
+       but WITHOUT ANY WARRANTY; without even the implied warranty of
+       MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+       GNU General Public License for more details.
+
+       You should have received a copy of the GNU General Public License
+       along with this program.
+
+                                December 2023
