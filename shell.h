@@ -10,7 +10,10 @@
 extern char **environ;
 char *read_line(void);
 int is_built_in(char **command);
-void handle_built_in(char **command, int *status, int idx);
+void handle_built_in(char **command, int *status, int idx, char **av);
+void hsh_cd(char **cmd, int *status, int idx, char **av);
+void hsh_exit(char **cmd, int *status);
+void hsh_env(char **cmd, int *status);
 char *handle_path(char *command);
 char *_get_env(char *var);
 char *my_strdup(const char *s);
