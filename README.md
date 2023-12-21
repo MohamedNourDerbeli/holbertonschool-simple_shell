@@ -92,6 +92,12 @@ To use the simple shell, follow these steps:
 
 4. Enjoy using the simple shell!
 
+## Bugs 📢
+No known bugs.
+
+## Annotations 📢
+We have written an [article](https://www.linkedin.com/pulse/understanding-basics-what-happens-when-you-type-ls-c-your-derbeli%3FtrackingId=BGiHLmhtQ12wWdFnfWzZpA%253D%253D/?trackingId=BGiHLmhtQ12wWdFnfWzZpA%3D%3D) in which we deepen the internal processes within the shell by typing the command "ls -l *.c". We talk about fundamental elements such as the PATH, and conclude with the permission structure with some examples.
+
 ## Authors ✒️
 
 - [Nour Mohamed Derbeli](https://github.com/MohamedNourDerbeli)
