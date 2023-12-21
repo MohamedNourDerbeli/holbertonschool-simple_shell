@@ -28,7 +28,7 @@ int main(__attribute__((unused)) int ac, char **av)
 		if (!command)
 			continue;
 		if (is_built_in(command) == 1)
-			handle_built_in(command, &status, idx, av);
+			handle_built_in(command, &status);
 		else
 			status = exec(command, av, idx);
 	}
