@@ -24,8 +24,6 @@ int is_built_in(char **command)
  * handle_built_in - check the code
  * @command: char
  * @status: int
- * @idx: int
- * @av: char
  */
 void handle_built_in(char **command, int *status)
 
