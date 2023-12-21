@@ -1,10 +1,15 @@
 #include "shell.h"
-
+/**
+ * is_built_in - check the code
+ * @command: char
+ * Return: Always 0.
+ */
 int is_built_in(char **command)
 
 {
 	char *built[] = {"exit", "env", "cd", "help", NULL};
 	int i;
+
 	for (i = 0; built[i]; i++)
 	{
 		if (strcmp(command[0], built[i]) == 0)
@@ -13,8 +18,17 @@ int is_built_in(char **command)
 		}
 	}
 	return (0);
+
 }
+/**
+ * handle_built_in - check the code
+ * @command: char
+ * @status: int
+ * @idx: int
+ * @av: char
+ */
 void handle_built_in(char **command, int *status, int idx, char **av)
+
 {
 	if (strcmp(command[0], "exit") == 0)
 	{
@@ -24,18 +38,27 @@ void handle_built_in(char **command, int *status, int idx, char **av)
 	{
 		hsh_env(command, status);
 	}
-	else if (strcmp(command[0], "cd") == 0)
-	{
-		hsh_cd(command, status, idx, av);
-	}
 }
-
+/**
+ * hsh_exit - check the code
+ * @cmd: char
+ * @status: int
+ * Return: Always 0.
+ */
 void hsh_exit(char **cmd, int *status)
+
 {
 	free_array(cmd);
 	exit(*status);
 }
+/**
+ * hsh_env - check the code
+ * @cmd: char
+ * @status: int
+ * Return: Always 0.
+ */
 void hsh_env(char **cmd, int *status)
+
 {
 	int i;
 
@@ -45,26 +68,4 @@ void hsh_env(char **cmd, int *status)
 	}
 	free_array(cmd);
 	(*status) = 0;
-}
-void hsh_cd(char **cmd, int *status, int idx, char **av)
-{
-	(*status) = 0;
-	if (strcmp(cmd[1], "") == 0)
-	{
-		if (chdir("/") == -1)
-		{
-			fprintf(stderr, "%s: %d: %s: not found\n", av[0], idx, cmd[0]);
-			(*status) = 0;
-		}
-	}
-	else
-	{
-		if (chdir(cmd[1]) == -1)
-		{
-			fprintf(stderr, "%s: %d: %s: can't cd to %s\n", av[0], idx, cmd[0], cmd[1]);
-			(*status) = 0;
-		}
-	}
-
-	free_array(cmd);
 }
