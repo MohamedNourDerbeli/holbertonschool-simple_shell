@@ -1,6 +1,11 @@
 #include "shell.h"
-
+/**
+ * handle_path - read the code
+ * @command: char
+ * Return: Always 0.
+ */
 char *handle_path(char *command)
+
 {
 	char *env, *path, *cmd;
 	struct stat buf;
@@ -11,15 +16,15 @@ char *handle_path(char *command)
 		if (command[i] == '/')
 		{
 			if (stat(command, &buf) == 0)
-				return my_strdup(command);
+				return (my_strdup(command));
 
-			return NULL;
+			return (NULL);
 		}
 	}
 
 	env = _get_env("PATH");
 	if (!env)
-		return NULL;
+		return (NULL);
 
 	path = strtok(env, ":");
 	while (path)
@@ -31,7 +36,7 @@ char *handle_path(char *command)
 			if (stat(cmd, &buf) == 0)
 			{
 				free(env);
-				return cmd;
+				return (cmd);
 			}
 
 			free(cmd);
@@ -41,10 +46,10 @@ char *handle_path(char *command)
 		else
 		{
 			free(env);
-			return NULL;
+			return (NULL);
 		}
 	}
 
 	free(env);
-	return NULL;
+	return (NULL);
 }
