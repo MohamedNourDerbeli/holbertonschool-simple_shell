@@ -27,7 +27,7 @@ int is_built_in(char **command)
  * @idx: int
  * @av: char
  */
-void handle_built_in(char **command, int *status, int idx, char **av)
+void handle_built_in(char **command, int *status)
 
 {
 	if (strcmp(command[0], "exit") == 0)
