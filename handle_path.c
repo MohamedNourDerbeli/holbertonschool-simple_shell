@@ -17,15 +17,12 @@ char *handle_path(char *command)
 		{
 			if (stat(command, &buf) == 0)
 				return (my_strdup(command));
-
 			return (NULL);
 		}
 	}
-
 	env = _get_env("PATH");
 	if (!env)
 		return (NULL);
-
 	path = strtok(env, ":");
 	while (path)
 	{
@@ -38,9 +35,7 @@ char *handle_path(char *command)
 				free(env);
 				return (cmd);
 			}
-
 			free(cmd);
-
 			path = strtok(NULL, ":");
 		}
 		else
@@ -49,7 +44,6 @@ char *handle_path(char *command)
 			return (NULL);
 		}
 	}
-
 	free(env);
 	return (NULL);
 }
