@@ -1,6 +1,6 @@
 # Holberton School Simple Shell
 
-![Holberton School Logo](![Alt text](68747470733a2f2f692e6962622e636f2f546b32425a79542f776f72646d61726b2d63686572727937322e706e67.png))
+![Holberton School Logo](https://camo.githubusercontent.com/64c35dd60391e2c90277729276aa86cc921b0ad2/68747470733a2f2f692e6962622e636f2f546b32425a79542f776f72646d61726b2d63686572727937322e706e67)
 
 
 Welcome to the Holberton School Simple Shell project! This simple shell, developed by Nour Mohamed Derbeli, Eya Kadri, and Ahmed Hamri, is designed to handle command lines with arguments, manage the PATH, and include built-in functionalities.
@@ -77,12 +77,12 @@ To use the simple shell, follow these steps:
 
 2. Compile the shell:
    ```bash
-   gcc -Wall -Werror -Wextra -pedantic *.c -o shell
+   gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
    ```
 
 3. Run the shell:
    ```bash
-   ./shell
+   ./hsh
    ```
 
 4. Enjoy using the simple shell!
