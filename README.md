@@ -1,60 +1,98 @@
-# Simple Shell
+# Holberton School Simple Shell
 
-This project is a simple Unix shell developed as part of the curriculum at Holberton School. The shell handles command lines with arguments, manages the PATH, and includes built-in commands such as exit and env.
+![Holberton School Logo](![Alt text](68747470733a2f2f692e6962622e636f2f546b32425a79542f776f72646d61726b2d63686572727937322e706e67.png))
+
+
+Welcome to the Holberton School Simple Shell project! This simple shell, developed by Nour Mohamed Derbeli, Eya Kadri, and Ahmed Hamri, is designed to handle command lines with arguments, manage the PATH, and include built-in functionalities.
 
 ## Table of Contents
 
-- [Project Overview](#project-overview)
-- [Usage](#usage)
-- [Built-in Commands](#built-in-commands)
+- [Introduction](#introduction)
 - [Project Files](#project-files)
-- [Contributors](#contributors)
+- [Features](#features)
+- [Usage](#usage)
+- [Authors](#authors)
 - [Repository](#repository)
 
-## Project Overview
+## Introduction
 
-The simple shell is designed to execute command lines, handle arguments, and manage the PATH environment. It ensures that the `fork` system call is only used when the specified command exists. Additionally, the shell includes two built-in commands: exit and env.
+This simple shell is a project developed for Holberton School. It includes the following features:
+
+- Handling command lines with arguments
+- Managing the PATH
+- Not calling fork if the command doesn't exist
+- Implementing the `exit` built-in to exit the shell
+- Implementing the `env` built-in to print the current environment
+
+## Project Files
+
+The project consists of the following files:
+
+- `AUTHORS`
+- `README.md` (You are here!)
+- `built-in.c`
+- `exec.c`
+- `free_array.c`
+- `getenv.c`
+- `handle_path.c`
+- `main.c`
+- `man_1_simple_shell`
+- `my_strdup.c`
+
+## Features
+
+### Handling Command Lines
+
+The shell efficiently handles command lines with arguments, ensuring a smooth execution of commands.
+
+### PATH Management
+
+The PATH is managed to locate executable files and execute commands.
+
+### Non-fork Execution
+
+The fork is not called if the command doesn't exist, optimizing the execution process.
+
+### Exit Built-in
+
+The shell includes the `exit` built-in, allowing users to exit the shell easily.
+
+**Usage:**
+```bash
+$ exit
+```
+
+### Env Built-in
+
+The `env` built-in is implemented to print the current environment.
 
 ## Usage
 
-To compile the simple shell, use the provided Makefile:
+To use the simple shell, follow these steps:
 
-```bash
-make
-To run the shell, execute the compiled binary:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/MohamedNourDerbeli/holbertonschool-simple_shell.git
+   ```
 
-bash
-Copy code
-./simple_shell
-Once the shell is running, you can enter commands and utilize the built-in features.
+2. Compile the shell:
+   ```bash
+   gcc -Wall -Werror -Wextra -pedantic *.c -o shell
+   ```
 
-Built-in Commands
-Exit
-The exit command is implemented as a built-in command to exit the shell. No arguments are required for this command.
+3. Run the shell:
+   ```bash
+   ./shell
+   ```
 
-bash
-Copy code
-Usage: exit
-Env
-The env command is implemented to print the current environment.
+4. Enjoy using the simple shell!
 
-bash
-Copy code
-Usage: env
-Project Files
-AUTHORS: Contains a list of contributors to the project.
-README.md: The readme file you are currently reading.
-built-in.c: Implementation of the built-in commands (exit, env).
-exec.c: Execution of external commands.
-free_array.c: Freeing allocated memory for arrays.
-getenv.c: Implementation of the getenv function.
-handle_path.c: Handling the PATH environment variable.
-main.c: Main program entry point.
-man_1_simple_shell: Manual page for the simple shell.
-my_strdup.c: Implementation of the strdup function.
-Contributors
-Nour Mohamed Derbeli
-Eya Kadri
-Ahmed Hamri
-Repository
-The project repository can be found at: Holberton School Simple Shell
+## Authors
+
+- [Nour Mohamed Derbeli](https://github.com/MohamedNourDerbeli)
+- [Eya Kadri](https://github.com/Eyakadri)
+- [Ahmed Hamri](https://github.com/ahmed0hamri)
+
+## Repository
+
+[Holberton School Simple Shell Repository](https://github.com/MohamedNourDerbeli/holbertonschool-simple_shell.git)
