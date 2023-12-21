@@ -3,13 +3,16 @@
  * exec - exec
  * @command: char
  * @av: char
+ * @idx: int
  * Return: Always 0.
  */
 int exec(char **command, char **av, int idx)
+
 {
 	pid_t child;
 	int status;
 	char *path;
+
 	path = handle_path(command[0]);
 	if (!path)
 	{
