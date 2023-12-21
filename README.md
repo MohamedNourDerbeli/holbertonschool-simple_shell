@@ -1,4 +1,4 @@
-# Holberton School Simple Shell
+# Holberton School Simple Shell 🤖
 
 ![Holberton School Logo](https://camo.githubusercontent.com/64c35dd60391e2c90277729276aa86cc921b0ad2/68747470733a2f2f692e6962622e636f2f546b32425a79542f776f72646d61726b2d63686572727937322e706e67)
 
@@ -14,7 +14,7 @@ Welcome to the Holberton School Simple Shell project! This simple shell, develop
 - [Authors](#authors)
 - [Repository](#repository)
 
-## Introduction
+## Introduction 💭
 
 This simple shell is a project developed for Holberton School. It includes the following features:
 
@@ -24,7 +24,7 @@ This simple shell is a project developed for Holberton School. It includes the f
 - Implementing the `exit` built-in to exit the shell
 - Implementing the `env` built-in to print the current environment
 
-## Project Files
+## Project Files 📑
 
 The project consists of the following files:
 
@@ -39,7 +39,7 @@ The project consists of the following files:
 - `man_1_simple_shell`
 - `my_strdup.c`
 
-## Features
+## Features 🔨
 
 ### Handling Command Lines
 
@@ -66,7 +66,12 @@ $ exit
 
 The `env` built-in is implemented to print the current environment.
 
-## Usage
+
+## Flowchart 📌
+
+![Flowchart Logo](https://user-images.githubusercontent.com/60367519/79517219-2adbc000-8013-11ea-9835-30bf7c59a41e.jpg)
+
+## Usage 💻
 
 To use the simple shell, follow these steps:
 
@@ -87,12 +92,12 @@ To use the simple shell, follow these steps:
 
 4. Enjoy using the simple shell!
 
-## Authors
+## Authors ✒️
 
 - [Nour Mohamed Derbeli](https://github.com/MohamedNourDerbeli)
 - [Eya Kadri](https://github.com/Eyakadri)
 - [Ahmed Hamri](https://github.com/ahmed0hamri)
 
-## Repository
+## Repository 📔
 
 [Holberton School Simple Shell Repository](https://github.com/MohamedNourDerbeli/holbertonschool-simple_shell.git)
