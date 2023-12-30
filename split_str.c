@@ -52,7 +52,6 @@ char **split_str(char *line)
 	/*Free the original line and set the last element of the array to NULL*/
 	free(line), line = NULL;
 	command[i] = NULL;
-	/* Return the array of strings (tokens)
-*/
+	/* Return the array of strings (tokens)*/
 	return (command);
 }
