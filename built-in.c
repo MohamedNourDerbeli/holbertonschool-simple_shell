@@ -1,8 +1,9 @@
 #include "shell.h"
 /**
- * is_built_in - check the code
- * @command: char
- * Return: Always 0.
+ * is_built_in - Checks if a command is a built-in shell command.
+ *
+ * @command: Array of strings representing the command and its arguments.
+ * Return: 1 if the command is built-in, 0 otherwise.
  */
 int is_built_in(char **command)
 
@@ -21,9 +22,10 @@ int is_built_in(char **command)
 
 }
 /**
- * handle_built_in - check the code
- * @command: char
- * @status: int
+ * handle_built_in - Handles the execution of built-in shell commands.
+ *
+ * @command: Array of strings representing the command and its arguments.
+ * @status: Pointer to the status variable of the shell.
  */
 void handle_built_in(char **command, int *status)
 
@@ -38,10 +40,10 @@ void handle_built_in(char **command, int *status)
 	}
 }
 /**
- * hsh_exit - check the code
- * @cmd: char
- * @status: int
- * Return: Always 0.
+ * hsh_exit - Handles the "exit" built-in command.
+ *
+ * @cmd: Array of strings representing the command and its arguments.
+ * @status: Pointer to the status variable of the shell.
  */
 void hsh_exit(char **cmd, int *status)
 
@@ -50,10 +52,10 @@ void hsh_exit(char **cmd, int *status)
 	exit(*status);
 }
 /**
- * hsh_env - check the code
- * @cmd: char
- * @status: int
- * Return: Always 0.
+ * hsh_env - Handles the "env" built-in command.
+ *
+ * @cmd: Array of strings representing the command and its arguments.
+ * @status: Pointer to the status variable of the shell.
  */
 void hsh_env(char **cmd, int *status)
 
