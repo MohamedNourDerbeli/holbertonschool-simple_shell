@@ -3,11 +3,12 @@
  * handle_path - Locates the full path of an executable command.
  *
  * @command: The command to find the full path for.
- * Return: A dynamically allocated string containing the full path of the command.
- *         Returns NULL if the command is not found or in case of memory allocation failure.
+ * Return: A dynamically allocated string containing
+ * the full path of the command.
+ * Returns NULL if the command is not found
+ * or in case of memory allocation failure.
  */
 char *handle_path(char *command)
-
 {
 	char *env, *path, *cmd;
 	struct stat buf;
