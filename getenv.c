@@ -4,7 +4,8 @@
  *
  * @var: The name of the environment variable to retrieve.
  * Return: A dynamically allocated string containing the value of the variable.
- *         Returns NULL if the variable is not found or in case of memory allocation failure.
+ * Returns NULL if the variable is not found or
+ * in case of memory allocation failure.
  */
 char *_get_env(char *var)
 
